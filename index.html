@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="zh_CN"> 
+<head>
+<meta charset="UTF-8" />
+<title>Welcome</title>
+<script type="text/javascript">
+var ms_ie = false;
+var ua = window.navigator.userAgent;
+var old_ie = ua.indexOf('MSIE ');
+var new_ie = ua.indexOf('Trident/');
+    
+if ((old_ie > -1) || (new_ie > -1)) {
+	document.getElementById("warning").className="ie";
+}
+</script>
+<style class="cp-pen-styles">
+html body {
+	font: 100% Roboto;
+	margin: 50px;
+	background:#303f9f;
+	}
+.noie {display:none;}
+.ie .mask{height:100%; width:100%; position:fixed; _position:absolute; top:0; z-index:1000; } 
+.ie .opacity{ opacity:0.3; filter: alpha(opacity=30); background-color:#000; } 
+.ie .content{height:350px; width:700px; overflow:auto; border:2px solid #ccc; background-color:#fff; position:absolute; top:50%; left:50%; margin:-85px auto auto -400px; z-index:1001; word-wrap: break-word; padding:3px;} 
+</style>
+</head>
+
+<body onload=start()>
+
+<h1 style="margin-top:150px; color:#fff">Remember</h1>
+<h3>About this </h3>
+<a href="./play/" title="瞎玩">Play</a>
+<div class="mask opacity"></div> 
+<div id="warning" class="noie warning content"> 
+<h2>
+<span>声明：本站有可能不支持所有的IE浏览器</span>
+</h2>
+</div>
+
+</body>
+</html>
